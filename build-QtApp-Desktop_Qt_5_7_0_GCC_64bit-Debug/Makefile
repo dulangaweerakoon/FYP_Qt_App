@@ -615,6 +615,7 @@ qrc_resource.cpp: ../resource.qrc \
 		../QtApp/icons/analysis.png \
 		../QtApp/icons/movie_camera.png \
 		../QtApp/icons/options-512.png \
+		../QtApp/icons/floormap.png \
 		../QtApp/icons/tracking.png \
 		../QtApp/icons/cctv.png \
 		../QtApp/icons/heatmap.png
@@ -723,6 +724,9 @@ moc_mainwindow.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QMainWindow \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtouchdevice.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qtabwidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qicon.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QGraphicsScene \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qgraphicsscene.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qpen.h \
 		../QtApp/mainwindow.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
 	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/FYP/QtApp -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I. -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../QtApp/mainwindow.h -o moc_mainwindow.cpp
@@ -847,6 +851,9 @@ main.o: ../QtApp/main.cpp ../QtApp/mainwindow.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtouchdevice.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qtabwidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qicon.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QGraphicsScene \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qgraphicsscene.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qpen.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QApplication \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qapplication.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/qcoreapplication.h \
@@ -859,7 +866,6 @@ main.o: ../QtApp/main.cpp ../QtApp/mainwindow.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qframe.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextcursor.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextformat.h \
-		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qpen.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QPushButton \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qpushbutton.h \
@@ -967,6 +973,9 @@ mainwindow.o: ../QtApp/mainwindow.cpp ../QtApp/mainwindow.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtouchdevice.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qtabwidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qicon.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QGraphicsScene \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qgraphicsscene.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qpen.h \
 		ui_mainwindow.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QVariant \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QAction \
@@ -988,11 +997,16 @@ mainwindow.o: ../QtApp/mainwindow.cpp ../QtApp/mainwindow.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qlayoutitem.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qboxlayout.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qgridlayout.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QGraphicsView \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qgraphicsview.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qpainter.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextoption.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qscrollarea.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qframe.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QHeaderView \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qheaderview.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qabstractitemview.h \
-		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qabstractscrollarea.h \
-		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qframe.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/qabstractitemmodel.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/qitemselectionmodel.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
@@ -1011,8 +1025,6 @@ mainwindow.o: ../QtApp/mainwindow.cpp ../QtApp/mainwindow.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qlineedit.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextcursor.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextformat.h \
-		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qpen.h \
-		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QPushButton \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qpushbutton.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qabstractbutton.h \

@@ -20,11 +20,11 @@
       <x>0</x>
       <y>0</y>
       <width>831</width>
-      <height>611</height>
+      <height>651</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="icon">
@@ -135,6 +135,16 @@
      <attribute name="title">
       <string>Global Tracking</string>
      </attribute>
+     <widget class="QGraphicsView" name="glob_track_view">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>831</width>
+        <height>611</height>
+       </rect>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab_4">
      <attribute name="icon">

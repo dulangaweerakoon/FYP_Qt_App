@@ -20,12 +20,17 @@ int main(int argc, char *argv[])
         if(!cap.isOpened())  // check if we succeeded
             return -1;
 
-    for(;;){
-        Mat frame;
-        cap >> frame;
-        w.update_graphicView(frame);
-        waitKey(0);
-    }
+//    for(;;){
+//        Mat frame;
+//        cap >> frame;
+//        w.update_graphicView(frame);
+//        waitKey(0);
+//    }
+
+      for (int i =0;i<1000;i+=10){
+          w.update_globalTrack(i,i);
+          waitKey(0);
+      }
 
 //    Mat image;
 //        image = imread("/home/FYP/QtApp/analysis.png", CV_LOAD_IMAGE_COLOR);   // Read the file

@@ -42,6 +42,7 @@ public:
     QWidget *tab_2;
     QGraphicsView *graphicsView;
     QWidget *tab_3;
+    QGraphicsView *glob_track_view;
     QWidget *tab_4;
     QWidget *tab_5;
     QStatusBar *statusBar;
@@ -55,7 +56,7 @@ public:
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         tabWidget = new QTabWidget(centralWidget);
         tabWidget->setObjectName(QStringLiteral("tabWidget"));
-        tabWidget->setGeometry(QRect(0, 0, 831, 611));
+        tabWidget->setGeometry(QRect(0, 0, 831, 651));
         tab = new QWidget();
         tab->setObjectName(QStringLiteral("tab"));
         formLayoutWidget = new QWidget(tab);
@@ -112,6 +113,9 @@ public:
         tabWidget->addTab(tab_2, icon2, QString());
         tab_3 = new QWidget();
         tab_3->setObjectName(QStringLiteral("tab_3"));
+        glob_track_view = new QGraphicsView(tab_3);
+        glob_track_view->setObjectName(QStringLiteral("glob_track_view"));
+        glob_track_view->setGeometry(QRect(0, 0, 831, 611));
         QIcon icon3;
         icon3.addFile(QStringLiteral(":/Tab_Icons/QtApp/icons/tracking.png"), QSize(), QIcon::Normal, QIcon::Off);
         tabWidget->addTab(tab_3, icon3, QString());
@@ -132,7 +136,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(MainWindow);

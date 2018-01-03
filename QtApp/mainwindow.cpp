@@ -8,8 +8,10 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
 
     imageScene = new QGraphicsScene(this);
-    ui->graphicsView->setScene(imageScene);
+    globalScene = new QGraphicsScene(this);
 
+    ui->graphicsView->setScene(imageScene);
+    ui->glob_track_view->setScene(globalScene);
 }
 
 MainWindow::~MainWindow()
@@ -20,6 +22,23 @@ MainWindow::~MainWindow()
 void MainWindow::on_pushButton_clicked()
 {
     ui->lineEdit_2->setText(ui->lineEdit->text());
+}
+
+void MainWindow::update_globalTrack(int x, int y){
+    cv::Mat image;
+    cv::Mat temp;
+    image = cv::imread("/home/FYP/QtApp/floormap.png", CV_LOAD_IMAGE_COLOR);
+    cv::cvtColor(image, temp, CV_BGR2RGB);
+    cv::drawMarker(temp,cv::Point(x,y),0xffffff,cv::MARKER_CROSS,1,5,8);
+
+    QImage qImage((const uchar *) temp.data, temp.cols, temp.rows, temp.step, QImage::Format_RGB888);
+    qImage.bits();
+
+    globalScene->clear();
+
+    globalScene->addPixmap(QPixmap::fromImage(qImage));
+    globalScene->update();
+    ui->glob_track_view->update();
 }
 
 void MainWindow::update_graphicView(cv::Mat img)

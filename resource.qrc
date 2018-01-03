@@ -7,5 +7,6 @@
         <file>QtApp/icons/heatmap.png</file>
         <file>QtApp/icons/tracking.png</file>
         <file>QtApp/icons/server.jpeg</file>
+        <file>QtApp/icons/floormap.png</file>
     </qresource>
 </RCC>
