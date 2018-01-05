@@ -44,6 +44,7 @@ public:
     QWidget *tab_3;
     QGraphicsView *glob_track_view;
     QWidget *tab_4;
+    QGraphicsView *heatmap_view;
     QWidget *tab_5;
     QStatusBar *statusBar;
 
@@ -121,6 +122,9 @@ public:
         tabWidget->addTab(tab_3, icon3, QString());
         tab_4 = new QWidget();
         tab_4->setObjectName(QStringLiteral("tab_4"));
+        heatmap_view = new QGraphicsView(tab_4);
+        heatmap_view->setObjectName(QStringLiteral("heatmap_view"));
+        heatmap_view->setGeometry(QRect(0, 0, 831, 611));
         QIcon icon4;
         icon4.addFile(QStringLiteral(":/Tab_Icons/QtApp/icons/heatmap.png"), QSize(), QIcon::Normal, QIcon::Off);
         tabWidget->addTab(tab_4, icon4, QString());
@@ -136,7 +140,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(2);
+        tabWidget->setCurrentIndex(3);
 
 
         QMetaObject::connectSlotsByName(MainWindow);

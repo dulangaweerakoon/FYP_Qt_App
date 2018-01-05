@@ -19,6 +19,7 @@ public:
     ~MainWindow();
     void update_graphicView(cv::Mat img);
     void update_globalTrack(int x, int y);
+    void update_heatmap(int x, int y);
 
 private slots:
     void on_pushButton_clicked();
@@ -28,6 +29,14 @@ private:
     Ui::MainWindow *ui;
     QGraphicsScene *imageScene;
     QGraphicsScene *globalScene;
+    QGraphicsScene *heatmapScene;
+
+    cv::Mat floormap;
+
+    int count;
+
+    cv::Mat map;
+    cv::Mat pallete;
 
 };
 

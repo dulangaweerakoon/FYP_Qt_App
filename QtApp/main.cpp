@@ -16,9 +16,9 @@ int main(int argc, char *argv[])
     MainWindow w;
     w.show();
 
-    VideoCapture cap(0); // open the default camera
-        if(!cap.isOpened())  // check if we succeeded
-            return -1;
+//    VideoCapture cap(0); // open the default camera
+//        if(!cap.isOpened())  // check if we succeeded
+//            return -1;
 
 //    for(;;){
 //        Mat frame;
@@ -26,9 +26,24 @@ int main(int argc, char *argv[])
 //        w.update_graphicView(frame);
 //        waitKey(0);
 //    }
+    //Write Colour map
+    Mat pallete = Mat::zeros(256,5,CV_8UC1);
+    for (int i=0;i<256;i++){
+        for (int j=0;j<5;j++){
+            pallete.at<uint8_t>(i,j) = i;
+        }
+    }
+    Mat palleteSave;
+    applyColorMap(pallete,palleteSave,COLORMAP_JET);
 
-      for (int i =0;i<1000;i+=10){
+    //int val = palleteSave.at<cv::Vec3b>(0,0)[0];
+    cvtColor(palleteSave,palleteSave,CV_BGR2RGB);
+    //palleteSave.at<Vec3b>(0,0)={0,0,0};
+    imwrite("map.jpg",palleteSave);
+
+      for (int i =0;i<1000;i+=1){
           w.update_globalTrack(i,i);
+          w.update_heatmap(i,i);
           waitKey(0);
       }
 
